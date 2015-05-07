@@ -17,4 +17,4 @@ namespace Poker
             this.simbol = simbol;
         }
     }
-}
+}   

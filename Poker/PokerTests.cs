@@ -1,9 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using Shouldly;
+﻿using Shouldly;
 
 namespace Poker
 {
@@ -16,10 +11,16 @@ namespace Poker
         public void OnePair()
         {  
             var handDiscriminator=new HandDiscriminator();
-            int[] cards = new int[]
+
+            Card[] cards = new Card[] 
             {
-                1,2,2,4,5
+                new Card(1,"Pica"),
+                new Card(1,"Pica"),
+                new Card(4,"Pica"),
+                new Card(2,"Pica"),
+                new Card(5,"Pica"),
             };
+
             var handType=handDiscriminator.GetHandType(cards);
             handType.ShouldBe("One Pair");
         }
@@ -27,21 +28,33 @@ namespace Poker
         public void TwoPairs()
         {
             var handDiscriminator = new HandDiscriminator();
-            int[] cards = new int[]
+
+            Card[] cards = new Card[] 
             {
-                1,2,2,4,4
+                new Card(1,"Pica"),
+                new Card(1,"Pica"),
+                new Card(4,"Pica"),
+                new Card(4,"Pica"),
+                new Card(5,"Pica"),
             };
+
             var handType = handDiscriminator.GetHandType(cards);
+
             handType.ShouldBe("Two Pairs");
         }
 
         public void Cui()
         {
             var handDiscriminator = new HandDiscriminator();
-            int[] cards = new int[]
+            Card[] cards = new Card[] 
             {
-                1,2,2,2,4
+                new Card(1,"Pica"),
+                new Card(1,"Pica"),
+                new Card(1,"Pica"),
+                new Card(4,"Pica"),
+                new Card(5,"Pica"),
             };
+            
             var handType = handDiscriminator.GetHandType(cards);
             handType.ShouldBe("Cui");   
 
@@ -51,10 +64,16 @@ namespace Poker
         public void Fullhouse()
         {
             var handDiscriminator = new HandDiscriminator();
-            int[] cards = new int[]
+
+            Card[] cards = new Card[] 
             {
-                1,2,2,2,1
+                new Card(1,"Pica"),
+                new Card(1,"Pica"),
+                new Card(1,"Pica"),
+                new Card(4,"Pica"),
+                new Card(4,"Pica"),
             };
+            
             var handType = handDiscriminator.GetHandType(cards);
             handType.ShouldBe("FullHouse");   
         }
@@ -62,10 +81,16 @@ namespace Poker
         public void TestCareu()
         {
             var handDiscriminator = new HandDiscriminator();
-            int[] cards = new int[]
+
+            Card[] cards = new Card[] 
             {
-                2,2,2,2,1
+                new Card(1,"Pica"),
+                new Card(1,"Pica"),
+                new Card(1,"Pica"),
+                new Card(1,"Pica"),
+                new Card(4,"Pica"),
             };
+            
             var handType = handDiscriminator.GetHandType(cards);
             handType.ShouldBe("Careu");   
         }
@@ -73,10 +98,16 @@ namespace Poker
         public void TestChinta()
         {
             var handDiscriminator = new HandDiscriminator();
-            int[] cards = new int[]
+
+            Card[] cards = new Card[] 
             {
-                2,4,5,3,6
+                new Card(1,"Pica"),
+                new Card(2,"Pica"),
+                new Card(3,"Cacat"),
+                new Card(4,"Pica"),
+                new Card(5,"Pica"),
             };
+            
             var handType = handDiscriminator.GetHandType(cards);
             handType.ShouldBe("Chinta"); 
 
@@ -87,7 +118,7 @@ namespace Poker
             Card[] cards = new Card[] 
             {
                 new Card(2,"Pica"),
-                new Card(2,"Pica"),
+                new Card(1,"Pica"),
                 new Card(5,"Pica"),
                 new Card(8,"Pica"),
                 new Card(6,"Pica"),
