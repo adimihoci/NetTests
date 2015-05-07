@@ -4,10 +4,6 @@ namespace Poker
 {
     public class PokerTests
     {
-        public void Test()
-        {
-            
-        }
         public void OnePair()
         {  
             var handDiscriminator=new HandDiscriminator();
