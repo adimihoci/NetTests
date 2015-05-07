@@ -14,10 +14,10 @@ namespace Poker
 
             Card[] cards = new Card[] 
             {
-                new Card(1,"Pica"),
-                new Card(1,"Pica"),
+                new Card(1,"Cupa"),
+                new Card(1,"Caro"),
                 new Card(4,"Pica"),
-                new Card(2,"Pica"),
+                new Card(2,"Spatie"),
                 new Card(5,"Pica"),
             };
 
@@ -31,11 +31,11 @@ namespace Poker
 
             Card[] cards = new Card[] 
             {
+                new Card(1,"Caro"),
                 new Card(1,"Pica"),
-                new Card(1,"Pica"),
+                new Card(4,"Spatie"),
                 new Card(4,"Pica"),
-                new Card(4,"Pica"),
-                new Card(5,"Pica"),
+                new Card(5,"Cupa"),
             };
 
             var handType = handDiscriminator.GetHandType(cards);
@@ -48,11 +48,11 @@ namespace Poker
             var handDiscriminator = new HandDiscriminator();
             Card[] cards = new Card[] 
             {
+                new Card(1,"Spatie"),
                 new Card(1,"Pica"),
-                new Card(1,"Pica"),
-                new Card(1,"Pica"),
+                new Card(1,"Caro"),
                 new Card(4,"Pica"),
-                new Card(5,"Pica"),
+                new Card(5,"Cupa"),
             };
             
             var handType = handDiscriminator.GetHandType(cards);
@@ -67,11 +67,11 @@ namespace Poker
 
             Card[] cards = new Card[] 
             {
+                new Card(1,"Spatie"),
                 new Card(1,"Pica"),
-                new Card(1,"Pica"),
-                new Card(1,"Pica"),
+                new Card(1,"Caro"),
                 new Card(4,"Pica"),
-                new Card(4,"Pica"),
+                new Card(4,"Cupa"),
             };
             
             var handType = handDiscriminator.GetHandType(cards);
@@ -86,9 +86,9 @@ namespace Poker
             {
                 new Card(1,"Pica"),
                 new Card(1,"Pica"),
+                new Card(1,"Cupa"),
                 new Card(1,"Pica"),
-                new Card(1,"Pica"),
-                new Card(4,"Pica"),
+                new Card(4,"Spatie"),
             };
             
             var handType = handDiscriminator.GetHandType(cards);
@@ -101,10 +101,10 @@ namespace Poker
 
             Card[] cards = new Card[] 
             {
-                new Card(1,"Pica"),
+                new Card(1,"Caro"),
                 new Card(2,"Pica"),
-                new Card(3,"Cacat"),
-                new Card(4,"Pica"),
+                new Card(3,"Spatie"),
+                new Card(4,"Cupa"),
                 new Card(5,"Pica"),
             };
             
